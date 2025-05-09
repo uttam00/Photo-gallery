@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Original theme - commented out
+    --background: 35 50% 95%;
+    --background-rgb: 255, 245, 235;
+    --foreground: 30 10% 20%;
+    --card: 35 50% 95%;
+    --card-foreground: 30 10% 20%;
+    --popover: 35 50% 95%;
+    --popover-foreground: 30 10% 20%;
+    --primary: 346 77% 49%;
+    --primary-foreground: 355 100% 97%;
+    --secondary: 35 40% 92%;
+    --secondary-foreground: 30 10% 20%;
+    --muted: 35 40% 92%;
+    --muted-foreground: 30 10% 40%;
+    --accent: 35 40% 92%;
+    --accent-foreground: 30 10% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 40% 88%;
+    --input: 35 40% 88%;
+    --ring: 346 77% 49%;
+    */
+
+    /* New clean white theme */
+    --background: 0 0% 100%;
+    --background-rgb: 255, 255, 255;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 346 77% 49%;
+    --primary-foreground: 355 100% 97%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 346 77% 49%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 30 20% 8%;
+    --background-rgb: 20, 18, 15;
+    --foreground: 35 20% 95%;
+    --card: 30 20% 12%;
+    --card-foreground: 35 20% 95%;
+    --popover: 30 20% 8%;
+    --popover-foreground: 35 20% 95%;
+    --primary: 346 77% 49%;
+    --primary-foreground: 355 100% 97%;
+    --secondary: 30 20% 15%;
+    --secondary-foreground: 35 20% 95%;
+    --muted: 30 20% 15%;
+    --muted-foreground: 35 20% 60%;
+    --accent: 30 20% 15%;
+    --accent-foreground: 35 20% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 30 20% 15%;
+    --input: 30 20% 15%;
+    --ring: 346 77% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv03" on;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: rgba(255, 245, 235, 0.95);
+  }
+}
+
+/* Add smooth scrolling to the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add styles for the prose content in bio page */
+.prose {
+  @apply text-foreground;
+  font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv03" on;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.prose p {
+  @apply mb-6 leading-relaxed;
+  letter-spacing: -0.011em;
+  line-height: 1.7;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

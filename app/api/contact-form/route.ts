@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
 import { generateEmailHtml } from "@/emails/contact-form";
+import { runtime } from "../../../config";
+
+export { runtime };
 
 // Initialize SendGrid with API key
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;

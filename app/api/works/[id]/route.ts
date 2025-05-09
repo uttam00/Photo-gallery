@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDB } from "../../../../utils/database";
 import { ObjectId } from "mongodb";
+import { runtime } from "../../../../config";
+
+export { runtime };
 
 export async function GET(
   request: NextRequest,

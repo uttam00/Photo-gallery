@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { getDB } from "../../../utils/database";
+import { runtime } from "../../../config";
+
+export { runtime };
 
 export async function GET(request: Request) {
   try {

@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { v2 as cloudinary } from "cloudinary";
 import { getDB } from "@/utils/database";
+import { runtime } from "../../../config";
+
+export { runtime };
 
 // Configure Cloudinary
 cloudinary.config({

@@ -9,9 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    serverComponentsExternalPackages: ['mongodb'],
-  },
+  // experimental: {
+  //   serverComponentsExternalPackages: ['mongodb'],
+  // },
 }
 
 export default nextConfig
